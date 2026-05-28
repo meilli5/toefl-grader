@@ -1,0 +1,16 @@
+# Personal essays and graded output
+practice-*.md
+email-*.md
+*-graded.md
+
+# Personal reference materials
+academic-model/
+email-model/
+AI-托福作文批改训练指南---Google-Gemini/
+
+# Duplicate files already in skill
+/system_prompt.md
+/writing-rubrics.md
+
+# System files
+.DS_Store
