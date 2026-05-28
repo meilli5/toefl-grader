@@ -12,6 +12,21 @@ A Claude Code skill that grades TOEFL writing essays using official ETS rubrics.
 - Score 5 model essay rewrite preserving your core ideas
 - Calibrated against Magoosh scored samples (Score 5/3/2) for consistent grading
 
+## Repository Structure
+
+```
+toefl-grader/
+├── SKILL.md                        # Skill definition and grading workflow
+├── toefl-grader.skill             # Skill metadata (name, description)
+└── references/
+    ├── writing-rubrics.md         # Official ETS scoring rubrics (0-5 bands)
+    └── system_prompt.md           # Scoring methodology, audit rules, and calibration benchmarks
+```
+
+- `SKILL.md` — the core skill file loaded by Claude Code. Defines the step-by-step grading workflow: read rubrics → extract essay → score band → justify → diagnose → rewrite.
+- `references/writing-rubrics.md` — the official ETS TOEFL Writing Scoring Guide rubrics for both task types, used as the scoring standard.
+- `references/system_prompt.md` — methodology, Audit Focus rules (register, counter-argument quality, vague intensifiers), and Magoosh calibration benchmarks.
+
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) CLI
@@ -26,7 +41,7 @@ Or manually:
 
 ```bash
 git clone https://github.com/meilli5/toefl-grader.git
-ln -sf "$(pwd)/<repo-name>/toefl-grader" ~/.claude/skills/toefl-grader
+ln -sf "$(pwd)/toefl-grader" ~/.claude/skills/toefl-grader
 ```
 
 ## Usage
