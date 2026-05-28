@@ -19,13 +19,13 @@ A Claude Code skill that grades TOEFL writing essays using official ETS rubrics.
 ## Installation
 
 ```bash
-npx skills add https://github.com/<your-username>/<repo-name> --skill toefl-grader -g -y
+npx skills add https://github.com/meilli5/toefl-grader --skill toefl-grader -g -y
 ```
 
 Or manually:
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
+git clone https://github.com/meilli5/toefl-grader.git
 ln -sf "$(pwd)/<repo-name>/toefl-grader" ~/.claude/skills/toefl-grader
 ```
 
